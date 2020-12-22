@@ -12,6 +12,7 @@ function subtotal() {
     const totalSubtotal = totalPhonePriceNumber + totalCasePriceNumber;
 
     document.getElementById('subtotal').innerText = totalSubtotal;
+    document.getElementById('total').innerText = totalSubtotal;
 }
 
 const addPhone = document.getElementById('addPhone').addEventListener('click', function () {
@@ -36,7 +37,6 @@ const removePhone = document.getElementById('removePhone').addEventListener('cli
 
         const totalPrice = phonePrice * totalQuantity;
         document.getElementById('phonePrice').innerText = totalPrice;
-
         subtotal();
     }
 })
@@ -49,7 +49,6 @@ const addCase = document.getElementById('addCase').addEventListener('click', fun
 
     const totalPrice = casePrice * totalQuantity;
     document.getElementById('casePrice').innerText = totalPrice;
-
     subtotal();
 })
 
@@ -65,7 +64,6 @@ const removeCase = document.getElementById('removeCase').addEventListener('click
 
         const totalPrice = casePrice * totalQuantity;
         document.getElementById('casePrice').innerText = totalPrice;
-
         subtotal();
     }
 })
